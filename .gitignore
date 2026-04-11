@@ -38,8 +38,6 @@ ruff_cache/
 # Temp files
 .tmp/
 
-# Claude Code local settings (not for public repo)
-.claude/
 
 # Internal build notes (not for published repo)
 UPDATE.md
