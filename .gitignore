@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Dev scratch files
+dev_test.py
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environment
+.venv/
+
+# Environment variables (secrets)
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test caches
+.pytest_cache/
+pytest-cache-files-*/
+.coverage
+ruff_cache/
+*.db  # Local SQLite DBs (except .env.example's path)
+
+# Temp files
+.tmp/
+
+# Claude Code local settings (not for public repo)
+.claude/
+
+# Internal build notes (not for published repo)
+UPDATE.md
+MEMORY.md
+INSTRUCTIONS.md
