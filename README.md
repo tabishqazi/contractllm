@@ -404,16 +404,16 @@ signal it needs. Reduces retry rates 60–70% in practice.
 
 **Content-addressed schema hashing**
 Developers forget to bump version strings. The hash is computed from the
-actual content — system prompt + schemas. Same principle as Git. You cannot
+actual content system prompt + schemas. Same principle as Git. You cannot
 accidentally ship an untracked change.
 
 **SQLite for the version store**
 Zero infrastructure. No server. No connection string. File-based so version
 history travels with the repo. Would become PostgreSQL for a hosted service
-— that is when distribution and concurrent writes actually matter.
+ that is when distribution and concurrent writes actually matter.
 
 **Optional provider extras**
-Core package installs in seconds. Provider SDKs are large — forcing an
+Core package installs in seconds. Provider SDKs are large forcing an
 Anthropic install on OpenAI users wastes their time. Install only what you
 use: `pip install contractllm[openai]`.
 
