@@ -4,7 +4,7 @@
 > Because changing a prompt in production shouldn't be terrifying.
 
 ```bash
-pip install contractllm[openai]
+pip install contractllm
 ```
 
 ![Python](https://img.shields.io/badge/python-3.11+-blue?style=flat-square)
@@ -213,18 +213,11 @@ untracked change.**
 
 ## Installation
 
-Install with only the provider(s) you use. The core package is tiny.
-
 ```bash
-# OpenAI only  (~2 min install)
-pip install contractllm[openai]
-
-# Anthropic only  (~2 min install)
-pip install contractllm[anthropic]
-
-# Both providers  (~4 min install)
-pip install contractllm[all]
+pip install contractllm
 ```
+
+All providers (OpenAI, Anthropic) are included. Missing API keys raise a clear error at instantiation — not at install time.
 
 Add your API keys to a `.env` file:
 
@@ -374,14 +367,16 @@ contractllm runs <contract-name> --version v1 --limit 20
 ## Supported providers
 
 ```
-Provider      Install extra          Structured output method
-──────────────────────────────────────────────────────────────
-OpenAI        [openai]               response_format json_schema
-Anthropic     [anthropic]            Schema in system prompt
-Gemini        coming soon            —
-Mistral       coming soon            —
+Provider      Structured output method
+─────────────────────────────────────────────
+OpenAI        response_format json_schema
+Anthropic     Schema in system prompt
+Gemini        coming soon
+Mistral       coming soon
 Ollama        coming soon            Local models, zero API cost
 ```
+
+Both providers are included in the base install.
 
 ---
 
@@ -410,12 +405,7 @@ accidentally ship an untracked change.
 **SQLite for the version store**
 Zero infrastructure. No server. No connection string. File-based so version
 history travels with the repo. Would become PostgreSQL for a hosted service
- that is when distribution and concurrent writes actually matter.
-
-**Optional provider extras**
-Core package installs in seconds. Provider SDKs are large forcing an
-Anthropic install on OpenAI users wastes their time. Install only what you
-use: `pip install contractllm[openai]`.
+that is when distribution and concurrent writes actually matter.
 
 ---
 
